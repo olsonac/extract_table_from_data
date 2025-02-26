@@ -1,0 +1,23 @@
+﻿column_ID,data_column,table_column_name,column_order
+children_speed,overall_es,ES,1
+children_speed,overall_es_lb,ES lower CI boundary,2
+children_speed,overall_es_ub,ES upper CI boundary,3
+children_speed,overall_zval,z value,4
+children_speed,overall_pval,p value,5
+children_accuracy,overall_es,ES,1
+children_accuracy,overall_es_lb,ES lower CI boundary,2
+children_accuracy,overall_es_ub,ES upper CI boundary,3
+children_accuracy,overall_zval,z value,4
+children_accuracy,overall_pval,p value,5
+adult_speed,overall_es,ES,1
+adult_speed,overall_es_lb,ES lower CI boundary,2
+adult_speed,overall_es_ub,ES upper CI boundary,3
+adult_speed,overall_zval,z value,4
+adult_speed,overall_pval,p value,5
+adult_accuracy,overall_es,ES,1
+adult_accuracy,overall_es_lb,ES lower CI boundary,2
+adult_accuracy,overall_es_ub,ES upper CI boundary,3
+adult_accuracy,overall_zval,z value,4
+adult_accuracy,overall_pval,p value,5
+interaction,AIC_diff,AIC diff,6
+interaction,model_comparison_pval,likelihood p-value,7

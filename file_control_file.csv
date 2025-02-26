@@ -1,0 +1,4 @@
+﻿search_string,filetype_ID
+ResultSummary_Children_only_F1.*,Children
+ResultSummary_Adults_only_F1.*,Adults
+ResultSummary_F1_Children_Adult_.*_matched.*,Interaction

@@ -1,0 +1,11 @@
+default:
+  root_dir: "/Users/Olsonac-admin/Documents/current/PKU/PKU_child_adult_meta_analysis"
+  
+speed_accuracy_function_summary:
+  root_dir: "/Users/Olsonac-admin/Documents/current/PKU/PKU_child_adult_meta_analysis"
+  results_dir: "results/speed_accuracy_analysis_results_tables"
+  file_control_file: "src_table_extract/sa_file_control_file.csv"
+  line_control_file: "src_table_extract/sa_line_control_file.csv"
+  column_control_file: "src_table_extract/sa_column_control_file.csv"
+  output_file: "results/sa_summary_table.csv"
+  
