@@ -93,10 +93,10 @@ extract_N_data<-function(results_df){
 # current_file_search_string <- "ResultSummary_EF-Flexibility.*_Adults_with_outliers\\.csv$"
 # list.files(directory_to_search,current_file_search_string)
 
+removeQuotes <- function(x) gsub("\"", "", x)
+
 # testing
 # directory_to_search <- results_directory
-
-removeQuotes <- function(x) gsub("\"", "", x)
 
 get_results_file_list <- function(directory_to_search,file_control_df){
   # extract_file_information is a data frame (usually from a .csv file)
@@ -105,12 +105,28 @@ get_results_file_list <- function(directory_to_search,file_control_df){
   # (e.g. just N_summary, just with_outliers)
   all_file_list <- c()
   file_IDs <- c()
+  file_group <- c() # for ordering files
+  # order by group first and then by file_order
+  # with two different kinds of files, 
+  #     group = 1, order = 1; group = 2, order = 2 groups files from each control line together
+  #     group = 1, order = 1; group = 1, order = 2 groups control lines together
+  #     control line: a\n b g=1 o=1, g=2, o=2 means aaaabbbb
+  #.    control line: a\n b g=1 o=1, g=1, o=2 means abababab
+  file_group_number <- 1
   for(i in seq(1,nrow(file_control_df))){
-    file_group <- list.files(directory_to_search, pattern=file_control_df$search_string[i])
-    all_file_list <- c(all_file_list, file_group)
-    file_IDs<-c(file_IDs,rep(file_control_df$filetype_ID[i],length(file_group)))
+    filename_list <- list.files(directory_to_search, pattern=file_control_df$search_string[i])
+    all_file_list <- c(all_file_list, filename_list)
+    file_IDs <- c(file_IDs,rep(file_control_df$filetype_ID[i],length(filename_list)))
+    if(file_control_df$group_line_results[i]){ # put all files from one search line together across matches
+      file_group <- c(file_group,rep(file_group_number,length(filename_list)))
+      file_group_number <- file_group_number + 1
+    }else{ # group search results so all search lines are together for one match
+      file_group <- c(file_group, seq(1,length(filename_list)))
+    }
   }
-  file_list_df <- data.frame(file = all_file_list,filetype_ID=file_IDs)
+  file_list_df <- data.frame(file = all_file_list,filetype_ID=file_IDs, 
+                             file_group=file_group)
+  file_list_df <- file_list_df[order(file_list_df$file_group),]
   return(file_list_df)
 }
 

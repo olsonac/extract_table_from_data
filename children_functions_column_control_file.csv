@@ -1,0 +1,14 @@
+﻿column_ID,data_column,table_column_name,column_order
+Children_N,Group,task,1
+Children_N,wt_mean_phe_mean,current Phe,2
+Children_N,N_groups,N groups,3
+Children_N,N_measures,N measures,4
+Children_N,PKU_N,N PKU,5
+Children_N,control_N,N controls,6
+Children_stats,overall_es,ES,7
+Children_stats,overall_es_lb,ES lower CI boundary,8
+Children_stats,overall_es_ub,ES upper CI boundary,9
+Children_stats,overall_pval,ES p value,10
+Children_phe,AIC_diff,phe model AIC difference,11
+Children_phe,mod_coef,Phe coefficient,12
+Children_phe,model_comparison_pval,phe model p-value,13

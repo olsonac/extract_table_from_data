@@ -9,6 +9,7 @@ To accomplish this, we need 3 specifications in .csv files
 	- A regular expression (list.files() pattern) search string
 	- A filetypeID (used when we extract lines at the next step)
 		- The filetypeID is needed because different file types can need to extract lines in different ways and the filetypeID is used in the next line extraction step to extract lines in different ways from different types of files.
+	- group_line_results TRUE means all results from a line of the control file are grouped together (all files from line 1 followed by all files from line 2 etc.).  FALSE means that the files from the lines are interspersed (file 1 from line 1, file 1 from line 2 then file 2 from line 1, file 2 from line 2 etc...)
 		
 2) A set of search specifications for columns associated with filetypeIDs from above and setting columnIDs for below.  Each line has:
 	- A filetypeID used to select only the lines that apply to this filetype according to the filetypeID set in 1)
@@ -39,11 +40,11 @@ Example:  Raw datafiles have information from different age groups: children and
 
 File extract control file
 
-| search_string           | filetype_ID |
-| ----------------------- | ----------- |
-| `.*_Children_.*`        | Children    |
-| `.*_Adults_.*`          | Adults      |
-| `.*_Children_Adults_.*` | Interaction |
+| search_string           | filetype_ID | group_line_results |
+| ----------------------- | ----------- | ------------------ |
+| `.*_Children_.*`        | Children    | FALSE              |
+| `.*_Adults_.*`          | Adults      | FALSE              |
+| `.*_Children_Adults_.*` | Interaction | FALSE              |
 Line extract control file
 
 | filetype_ID | select_column_names | search_string                             | line_name   | line_order | column_ID   |

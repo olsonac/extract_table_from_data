@@ -1,0 +1,4 @@
+﻿filetype_ID,select_column_name,search_string,line_name,line_order,column_ID
+Adults_stats,Label,^Adults null model,Adults,1,Adults_stats
+Adults_stats,Label,^Adults CenteredPhe model,Adults,1,Adults_phe
+Adults_N,age_group,^Adults,Adults,1,Adults_N

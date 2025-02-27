@@ -1,0 +1,14 @@
+﻿column_ID,data_column,table_column_name,column_order
+overall_N,Group,task,1
+overall_N,wt_mean_phe_mean,current Phe,2
+overall_N,N_groups,N groups,3
+overall_N,N_measures,N measures,4
+overall_N,PKU_N,N PKU,5
+overall_N,control_N,N controls,6
+overall_stats,overall_es,ES,7
+overall_stats,overall_es_lb,ES lower CI boundary,8
+overall_stats,overall_es_ub,ES upper CI boundary,9
+overall_stats,overall_pval,ES p value,10
+overall_phe,AIC_diff,phe model AIC difference,11
+overall_phe,mod_coef,Phe coefficient,12
+overall_phe,model_comparison_pval,phe model p-value,13
