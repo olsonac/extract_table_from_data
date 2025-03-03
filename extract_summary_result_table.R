@@ -3,7 +3,10 @@ library(tidyverse)
 rm(list = ls()) # clear global environment
 
 # set which summary to do based on the configuration file
-Sys.setenv(R_CONFIG_ACTIVE = "overall_function_summary") # matched and unmatched speed/accuracy X child/adult
+#Sys.setenv(R_CONFIG_ACTIVE = "adults_function_summary") # matched and unmatched speed/accuracy X child/adult
+#Sys.setenv(R_CONFIG_ACTIVE = "children_function_summary")
+#Sys.setenv(R_CONFIG_ACTIVE = "overall_function_summary")
+Sys.setenv(R_CONFIG_ACTIVE = "speed_accuracy_function_summary")
 
 # read the configuration file
 config <- config::get(file="./src_table_extract/config_extract_summary.yml")
@@ -26,7 +29,7 @@ column_control_df <- read.csv(paste0(root_dir,"/",column_control_file))
 
 # get list of files
 file_list <- get_results_file_list(results_directory,file_control_df)
-write.csv(file_list,paste0(root_dir,"/",file_list_output_file))
+write.csv(file_list,paste0(root_dir,"/",file_list_output_file),row.names = FALSE)
 
 # set up table df
 table_column_names <- unique(column_control_df$table_column_name)
@@ -38,15 +41,20 @@ table_column_names <- c("line_name","line_order",table_column_names)
 
 # figure out how many lines will be in the final table
 # this is based on the number of files / number of files per line
-line_info_df <- line_control_df %>% select("filetype_ID", line_order)
-files_per_line <- nrow(distinct(line_info_df))
-number_of_table_rows <- nrow(file_list)/files_per_line
+# line_info_df <- line_control_df %>% select("filetype_ID", line_order)
+# files_per_line <- nrow(distinct(line_info_df))
+# number_of_table_rows <- nrow(file_list)/files_per_line
 
-table_df <- data.frame(matrix(nrow=number_of_table_rows, ncol = length(table_column_names)))
+# add one line at a time to this overall table
+table_df <- data.frame(matrix(nrow=1, ncol = length(table_column_names)))
+
+# temporarily hold info for one line here before adding to the overall table
+one_table_line <- data.frame(matrix(nrow=1, ncol=length(table_column_names)))
 colnames(table_df) <- table_column_names
+colnames(one_table_line) <- table_column_names
 
 # get lines from files
-line_counter <- 1
+# line_counter <- 1
 for(i in seq(1,nrow(file_list))){
   # read a raw datafile from the list
   print(paste0("reading file: ",file_list$file[i]))
@@ -55,32 +63,41 @@ for(i in seq(1,nrow(file_list))){
   current_line_control <- line_control_df[line_control_df$filetype_ID == file_list$filetype_ID[i],]
   if(i>1){
     if(file_list$file_group[i] != file_list$file_group[i-1]){
-      line_counter <- line_counter + 1
+      # line_counter <- line_counter + 1
+      table_df <- rbind(table_df,one_table_line)
+      one_table_line[1,] <- NA
     }
   }
   for(j in seq(1,nrow(current_line_control))){
     if(j>1){
       if(current_line_control$line_order[j] != current_line_control$line_order[j-1]){
-      line_counter <- line_counter + 1
+      # line_counter <- line_counter + 1
+        table_df <- rbind(table_df,one_table_line)
+        one_table_line[1,] <- NA
       }
     }
     current_line <- raw_data_df[grepl(current_line_control$search_string[[j]],
                                       unlist(raw_data_df[current_line_control$select_column_name[j]])),]
     if(nrow(current_line) > 0){ # found a match
-      table_df$line_name[line_counter] = current_line_control$line_name[j]
-      table_df$line_order[line_counter] = current_line_control$line_order[j]
-  #    current_line <- raw_data_df[raw_data_df[current_line_control$select_column_name[j]] ==
-  #                                current_line_control$search_string[j],]
+      #table_df$line_name[line_counter] = current_line_control$line_name[j]
+      #table_df$line_order[line_counter] = current_line_control$line_order[j]
+      one_table_line$line_name[1] = current_line_control$line_name[j]
+      one_table_line$line_order[1] = current_line_control$line_order[j]      
+
       # use the columnID to filter the column_control_df
       current_column_control <- column_control_df[column_control_df$column_ID == current_line_control$column_ID[j],]
       # loop through the columns in the column control to put them in the table df
       for(k in seq(1,nrow(current_column_control))){
-        table_df[line_counter,current_column_control$table_column_name[k]] <- current_line[current_column_control$data_column[k]][[1]]
+ #       table_df[line_counter,current_column_control$table_column_name[k]] <- current_line[current_column_control$data_column[k]][[1]]
+        one_table_line[1,current_column_control$table_column_name[k]] <- current_line[current_column_control$data_column[k]][[1]]
       }
     }
   }
 }
 
+table_df <- rbind(table_df,one_table_line) # add line that was constructed on last cycle of loop
+
+table_df <- table_df[-1,] # get rid of blank first line 
 table_df <- table_df[order(table_df$line_order),]
 column_order_info <- column_control_df[c("table_column_name","column_order")]
 column_order_info <- distinct(column_order_info)
@@ -88,4 +105,4 @@ order_values <- unlist(column_order_info$column_order)+2 # because of name/order
 column_order <- c(1,2,order_values)
 table_df <- table_df[,column_order]
 table_df <- table_df[,colnames(table_df) != "line_order"]
-write.csv(table_df, paste0(root_dir,"/",config$output_file))
+write.csv(table_df, paste0(root_dir,"/",config$output_file), row.names = FALSE)

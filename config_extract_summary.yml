@@ -7,17 +7,17 @@ speed_accuracy_function_summary:
   file_control_file: "src_table_extract/sa_file_control_file.csv"
   line_control_file: "src_table_extract/sa_line_control_file.csv"
   column_control_file: "src_table_extract/sa_column_control_file.csv"
-  output_file: "results/sa_summary_table.csv"
-  file_list_output_file: "results/sa_file_list.csv"
+  output_file: "results/speed_accuracy_analysis_results_tables/sa_summary_table.csv"
+  file_list_output_file: "results/speed_accuracy_analysis_results_tables/sa_file_list.csv"
   
-adult_function_summary:
+adults_function_summary:
   root_dir: "/Users/Olsonac-admin/Documents/current/PKU/PKU_child_adult_meta_analysis"
   results_dir: "results/function_results_tables"
   file_control_file: "src_table_extract/adult_functions_file_control_file.csv"
   line_control_file: "src_table_extract/adult_functions_line_control_file.csv"
   column_control_file: "src_table_extract/adult_functions_column_control_file.csv"
-  output_file: "results/adult_functions_summary_table.csv"
-  file_list_output_file: "results/adult_functions_file_list.csv"
+  output_file: "results/function_results_tables/adult_functions_summary_table.csv"
+  file_list_output_file: "results/function_results_tables/adult_functions_file_list.csv"
   
 children_function_summary:
   root_dir: "/Users/Olsonac-admin/Documents/current/PKU/PKU_child_adult_meta_analysis"
@@ -25,8 +25,8 @@ children_function_summary:
   file_control_file: "src_table_extract/children_functions_file_control_file.csv"
   line_control_file: "src_table_extract/children_functions_line_control_file.csv"
   column_control_file: "src_table_extract/children_functions_column_control_file.csv"
-  output_file: "results/children_functions_summary_table.csv"  
-  file_list_output_file: "results/children_functions_file_list.csv"
+  output_file: "results/function_results_tables/children_functions_summary_table.csv"  
+  file_list_output_file: "results/function_results_tables/children_functions_file_list.csv"
   
 overall_function_summary: 
   root_dir: "/Users/Olsonac-admin/Documents/current/PKU/PKU_child_adult_meta_analysis"
@@ -34,5 +34,5 @@ overall_function_summary:
   file_control_file: "src_table_extract/overall_functions_file_control_file.csv"
   line_control_file: "src_table_extract/overall_functions_line_control_file.csv"
   column_control_file: "src_table_extract/overall_functions_column_control_file.csv"
-  output_file: "results/overall_functions_summary_table.csv"
-  file_list_output_file: "results/overall_functions_file_list.csv"
+  output_file: "results/function_results_tables/overall_functions_summary_table.csv"
+  file_list_output_file: "results/function_results_tables/overall_functions_file_list.csv"
