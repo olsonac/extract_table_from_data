@@ -4,20 +4,52 @@ children_speed,overall_es_lb,ES lower CI boundary,2
 children_speed,overall_es_ub,ES upper CI boundary,3
 children_speed,overall_zval,z value,4
 children_speed,overall_pval,p value,5
+children_speed_phe,AIC_diff,AIC diff,6
+children_speed_phe,model_comparison_pval,likelihood p-value,7
+children_speed_phe,mod_coef,Phe coefficients,8
+children_speed_phe_N,wt_mean_phe_mean,PKU phe mean,9
+children_speed_phe_N,N_groups,N groups,10
+children_speed_phe_N,N_measures,N measures,11
+children_speed_phe_N,PKU_N,PKU N,12
+children_speed_phe_N,control_N,Control N,13
 children_accuracy,overall_es,ES,1
 children_accuracy,overall_es_lb,ES lower CI boundary,2
 children_accuracy,overall_es_ub,ES upper CI boundary,3
 children_accuracy,overall_zval,z value,4
 children_accuracy,overall_pval,p value,5
+children_accuracy_phe,AIC_diff,AIC diff,6
+children_accuracy_phe,model_comparison_pval,likelihood p-value,7
+children_accuracy_phe,mod_coef,Phe coefficients,8
+children_accuracy_phe_N,wt_mean_phe_mean,PKU phe mean,9
+children_accuracy_phe_N,N_groups,N groups,10
+children_accuracy_phe_N,N_measures,N measures,11
+children_accuracy_phe_N,PKU_N,PKU N,12
+children_accuracy_phe_N,control_N,Control N,13
 adult_speed,overall_es,ES,1
 adult_speed,overall_es_lb,ES lower CI boundary,2
 adult_speed,overall_es_ub,ES upper CI boundary,3
 adult_speed,overall_zval,z value,4
 adult_speed,overall_pval,p value,5
+adult_speed_phe,AIC_diff,AIC diff,6
+adult_speed_phe,model_comparison_pval,likelihood p-value,7
+adult_speed_phe,mod_coef,Phe coefficients,8
+adult_speed_phe_N,wt_mean_phe_mean,PKU phe mean,9
+adult_speed_phe_N,N_groups,N groups,10
+adult_speed_phe_N,N_measures,N measures,11
+adult_speed_phe_N,PKU_N,PKU N,12
+adult_speed_phe_N,control_N,Control N,13
 adult_accuracy,overall_es,ES,1
 adult_accuracy,overall_es_lb,ES lower CI boundary,2
 adult_accuracy,overall_es_ub,ES upper CI boundary,3
 adult_accuracy,overall_zval,z value,4
 adult_accuracy,overall_pval,p value,5
+adult_accuracy_phe,AIC_diff,AIC diff,6
+adult_accuracy_phe,model_comparison_pval,likelihood p-value,7
+adult_accuracy_phe,mod_coef,Phe coefficients,8
+adult_accuracy_phe_N,wt_mean_phe_mean,PKU phe mean,9
+adult_accuracy_phe_N,N_groups,N groups,10
+adult_accuracy_phe_N,N_measures,N measures,11
+adult_accuracy_phe_N,PKU_N,PKU N,12
+adult_accuracy_phe_N,control_N,Control N,13
 interaction,AIC_diff,AIC diff,6
 interaction,model_comparison_pval,likelihood p-value,7

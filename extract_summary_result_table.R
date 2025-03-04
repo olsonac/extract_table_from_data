@@ -3,10 +3,10 @@ library(tidyverse)
 rm(list = ls()) # clear global environment
 
 # set which summary to do based on the configuration file
-#Sys.setenv(R_CONFIG_ACTIVE = "adults_function_summary") # matched and unmatched speed/accuracy X child/adult
+Sys.setenv(R_CONFIG_ACTIVE = "adults_function_summary") # matched and unmatched speed/accuracy X child/adult
 #Sys.setenv(R_CONFIG_ACTIVE = "children_function_summary")
 #Sys.setenv(R_CONFIG_ACTIVE = "overall_function_summary")
-Sys.setenv(R_CONFIG_ACTIVE = "speed_accuracy_function_summary")
+#Sys.setenv(R_CONFIG_ACTIVE = "speed_accuracy_function_summary")
 
 # read the configuration file
 config <- config::get(file="./src_table_extract/config_extract_summary.yml")
@@ -55,26 +55,27 @@ colnames(one_table_line) <- table_column_names
 
 # get lines from files
 # line_counter <- 1
+previous_line_order <- 1
+previous_file_group <- 1
 for(i in seq(1,nrow(file_list))){
   # read a raw datafile from the list
   print(paste0("reading file: ",file_list$file[i]))
   raw_data_df <- read.csv(paste0(results_directory,"/",file_list$file[i]))
   # use the filetype_ID to filter the line_control_df
   current_line_control <- line_control_df[line_control_df$filetype_ID == file_list$filetype_ID[i],]
-  if(i>1){
-    if(file_list$file_group[i] != file_list$file_group[i-1]){
-      # line_counter <- line_counter + 1
-      table_df <- rbind(table_df,one_table_line)
-      one_table_line[1,] <- NA
-    }
+  if(file_list$file_group[i] != previous_file_group){
+    # line_counter <- line_counter + 1
+    table_df <- rbind(table_df,one_table_line)
+    one_table_line[1,] <- NA
   }
   for(j in seq(1,nrow(current_line_control))){
-    if(j>1){
-      if(current_line_control$line_order[j] != current_line_control$line_order[j-1]){
-      # line_counter <- line_counter + 1
-        table_df <- rbind(table_df,one_table_line)
-        one_table_line[1,] <- NA
-      }
+    print(paste0("j = ",j," current line order: ", 
+                 current_line_control$line_order[j], " past line order: ",
+                 previous_line_order))      
+    if(current_line_control$line_order[j] != previous_line_order){
+    # line_counter <- line_counter + 1
+      table_df <- rbind(table_df,one_table_line)
+      one_table_line[1,] <- NA
     }
     current_line <- raw_data_df[grepl(current_line_control$search_string[[j]],
                                       unlist(raw_data_df[current_line_control$select_column_name[j]])),]
@@ -91,8 +92,10 @@ for(i in seq(1,nrow(file_list))){
  #       table_df[line_counter,current_column_control$table_column_name[k]] <- current_line[current_column_control$data_column[k]][[1]]
         one_table_line[1,current_column_control$table_column_name[k]] <- current_line[current_column_control$data_column[k]][[1]]
       }
+      previous_line_order <- current_line_control$line_order[j]      
     }
   }
+  previous_file_group <- file_list$file_group[i]
 }
 
 table_df <- rbind(table_df,one_table_line) # add line that was constructed on last cycle of loop

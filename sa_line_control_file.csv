@@ -1,10 +1,14 @@
 ﻿filetype_ID,select_column_name,search_string,line_name,line_order,column_ID
-Children,Label,speed model,"""children - speed""",1,children_speed
-Children,Label,speed phe model,"""children - speed - phe model""",2,children_speed
-Children,Label,accuracy model,"""children - accuracy""",3,children_accuracy
-Children,Label,accuracy phe model,"""children accuracy - phe model""",4,children_accuracy
-Adults,Label,speed model,"""adults - speed""",5,adult_speed
-Adults,Label,speed phe model,"""adults - speed - phe model""",6,adult_speed
-Adults,Label,accuracy model,"""adults - accuracy""",7,adult_accuracy
-Adults,Label,accuracy phe model,"""adults accuracy - phe model""",8,adult_accuracy
-Interaction,Label,age_group \* speed_acc_matched model,"""age X speed/acc""",9,interaction
+Children_stats_speed,Label,speed null model,"""children - speed""",1,children_speed
+Children_stats_speed,Label,speed CenteredPhe model,"""children - speed""",1,children_speed_phe
+Children_N_speed,speed_acc_matched,speed,"""children - speed""",1,children_speed_phe_N
+Children_stats_accuracy,Label,accuracy null model,"""children - accuracy""",2,children_accuracy
+Children_stats_accuracy,Label,accuracy CenteredPhe model,"""children - accuracy""",2,children_accuracy_phe
+Children_N_accuracy,speed_acc_matched,accuracy,"""children - accuracy""",2,children_accuracy_phe_N
+Adults_stats_speed,Label,speed null model,"""adults - speed""",3,adult_speed
+Adults_stats_speed,Label,speed CenteredPhe model,"""adults - speed""",3,adult_speed_phe
+Adults_N_speed,speed_acc_matched,speed,"""adults - speed""",3,adult_speed_phe_N
+Adults_stats_accuracy,Label,accuracy null model,"""adults - accuracy""",4,adult_accuracy
+Adults_stats_accuracy,Label,accuracy CenteredPhe model,"""adults - accuracy""",4,adult_accuracy_phe
+Adults_N_accuracy,speed_acc_matched,accuracy,"""adults - accuracy""",4,adult_accuracy_phe_N
+Interaction_stats,Label,age_group \* speed_acc_matched model,"""age X speed/acc""",5,interaction
