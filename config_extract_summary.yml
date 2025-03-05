@@ -36,3 +36,12 @@ overall_function_summary:
   column_control_file: "src_table_extract/overall_functions_column_control_file.csv"
   output_file: "results/function_results_tables/overall_functions_summary_table.csv"
   file_list_output_file: "results/function_results_tables/overall_functions_file_list.csv"
+  
+effect_size_function_summary: 
+  root_dir: "/Users/Olsonac-admin/Documents/current/PKU/PKU_child_adult_meta_analysis"
+  results_dir: "results/function_results_tables"
+  file_control_file: "src_table_extract/es_file_control_file.csv"
+  line_control_file: "src_table_extract/es_line_control_file.csv"
+  column_control_file: "src_table_extract/es_column_control_file.csv"
+  output_file: "results/ES_analysis_results_tables/es_functions_summary_table.csv"
+  file_list_output_file: "results/ES_analysis_results_tables/es_functions_file_list.csv"

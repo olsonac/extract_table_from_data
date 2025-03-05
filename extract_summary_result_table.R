@@ -3,10 +3,11 @@ library(tidyverse)
 rm(list = ls()) # clear global environment
 
 # set which summary to do based on the configuration file
-Sys.setenv(R_CONFIG_ACTIVE = "adults_function_summary") # matched and unmatched speed/accuracy X child/adult
+#Sys.setenv(R_CONFIG_ACTIVE = "adults_function_summary") # matched and unmatched speed/accuracy X child/adult
 #Sys.setenv(R_CONFIG_ACTIVE = "children_function_summary")
 #Sys.setenv(R_CONFIG_ACTIVE = "overall_function_summary")
 #Sys.setenv(R_CONFIG_ACTIVE = "speed_accuracy_function_summary")
+Sys.setenv(R_CONFIG_ACTIVE = "effect_size_function_summary")
 
 # read the configuration file
 config <- config::get(file="./src_table_extract/config_extract_summary.yml")
