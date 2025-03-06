@@ -5,10 +5,12 @@ Children_N_speed,speed_acc_matched,speed,"""children - speed""",1,children_speed
 Children_stats_accuracy,Label,accuracy null model,"""children - accuracy""",2,children_accuracy
 Children_stats_accuracy,Label,accuracy CenteredPhe model,"""children - accuracy""",2,children_accuracy_phe
 Children_N_accuracy,speed_acc_matched,accuracy,"""children - accuracy""",2,children_accuracy_phe_N
-Adults_stats_speed,Label,speed null model,"""adults - speed""",3,adult_speed
-Adults_stats_speed,Label,speed CenteredPhe model,"""adults - speed""",3,adult_speed_phe
-Adults_N_speed,speed_acc_matched,speed,"""adults - speed""",3,adult_speed_phe_N
-Adults_stats_accuracy,Label,accuracy null model,"""adults - accuracy""",4,adult_accuracy
-Adults_stats_accuracy,Label,accuracy CenteredPhe model,"""adults - accuracy""",4,adult_accuracy_phe
-Adults_N_accuracy,speed_acc_matched,accuracy,"""adults - accuracy""",4,adult_accuracy_phe_N
-Interaction_stats,Label,age_group \* speed_acc_matched model,"""age X speed/acc""",5,interaction
+Chidren_stats_speed_accuracy_diff,Label,^speed_acc_matched model$,"""children - speed/accuracy difference""",3,children_speed_acc_diff
+Adults_stats_speed,Label,speed null model,"""adults - speed""",4,adult_speed
+Adults_stats_speed,Label,speed CenteredPhe model,"""adults - speed""",4,adult_speed_phe
+Adults_N_speed,speed_acc_matched,speed,"""adults - speed""",4,adult_speed_phe_N
+Adults_stats_accuracy,Label,accuracy null model,"""adults - accuracy""",5,adult_accuracy
+Adults_stats_accuracy,Label,accuracy CenteredPhe model,"""adults - accuracy""",5,adult_accuracy_phe
+Adults_N_accuracy,speed_acc_matched,accuracy,"""adults - accuracy""",5,adult_accuracy_phe_N
+Adults_stats_speed_accuracy_diff,Label,^speed_acc_matched model$,"""adults - speed/accuracy difference""",6,adult_speed_acc_diff
+Interaction_stats,Label,age_group \* speed_acc_matched model,"""age X speed/acc""",7,interaction

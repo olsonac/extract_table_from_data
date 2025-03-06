@@ -3,8 +3,10 @@ ResultSummary_Children_only_F1.*,Children_stats_speed,FALSE
 N_summary_Children_only_F1.*,Children_N_speed,FALSE
 ResultSummary_Children_only_F1.*,Children_stats_accuracy,FALSE
 N_summary_Children_only_F1.*,Children_N_accuracy,FALSE
+ResultSummary_Children_only_F1.*,Chidren_stats_speed_accuracy_diff,FALSE
 ResultSummary_Adults_only_F1.*,Adults_stats_speed,FALSE
 N_summary_Adults_only_F1.*,Adults_N_speed,FALSE
 ResultSummary_Adults_only_F1.*,Adults_stats_accuracy,FALSE
 N_summary_Adults_only_F1.*,Adults_N_accuracy,FALSE
+ResultSummary_Adults_only_F1.*,Adults_stats_speed_accuracy_diff,FALSE
 ResultSummary_F1_Children_Adult_.*_matched.*,Interaction_stats,FALSE
