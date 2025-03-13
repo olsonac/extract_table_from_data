@@ -1,0 +1,7 @@
+﻿column_ID,data_column,table_column_name,column_order
+adults,overall_es,Adult ES,1
+children,overall_es,Children ES,2
+age_model,AIC_diff,model AIC difference,3
+age_model,model_comparison_pval,Age p-value,4
+phe_by_age_model,AIC_diff,Age X Phe AIC diff,5
+phe_by_age_model,model_comparison_pval,Age X Phe p-value,6

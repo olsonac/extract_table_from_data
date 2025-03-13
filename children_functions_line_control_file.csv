@@ -1,4 +1,4 @@
 ﻿filetype_ID,select_column_name,search_string,line_name,line_order,column_ID
-Children_stats,Label,^Children null model,Children,1,Children_stats
-Children_stats,Label,^Children CenteredPhe model,Children,1,Children_phe
-Children_N,age_group,^Children,Children,1,Children_N
+Children_stats,Label,^Children null model$,Children,1,Children_stats
+Children_stats,Label,^Children CenteredPhe model$,Children,1,Children_phe
+Children_N,age_group,^Children$,Children,1,Children_N

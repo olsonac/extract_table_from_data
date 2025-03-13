@@ -37,20 +37,47 @@ overall_function_summary:
   output_file: "results/function_results_tables/overall_functions_summary_table.csv"
   file_list_output_file: "results/function_results_tables/overall_functions_file_list.csv"
   
-effect_size_function_summary: 
+adult_effect_size_function_summary: 
   root_dir: "/Users/Olsonac-admin/Documents/current/PKU/PKU_child_adult_meta_analysis"
   results_dir: "results/function_results_tables"
-  file_control_file: "src_table_extract/es_file_control_file.csv"
-  line_control_file: "src_table_extract/es_line_control_file.csv"
-  column_control_file: "src_table_extract/es_column_control_file.csv"
-  output_file: "results/ES_analysis_results_tables/es_functions_summary_table.csv"
-  file_list_output_file: "results/ES_analysis_results_tables/es_functions_file_list.csv"
+  file_control_file: "src_table_extract/es_adult_file_control_file.csv"
+  line_control_file: "src_table_extract/es_adult_line_control_file.csv"
+  column_control_file: "src_table_extract/es_adult_column_control_file.csv"
+  output_file: "results/ES_analysis_results_tables/adult_es_functions_summary_table.csv"
+  file_list_output_file: "results/ES_analysis_results_tables/adult_es_functions_file_list.csv"
   
-effect_size_summary: 
+within_age_effect_size_summary: 
   root_dir: "/Users/Olsonac-admin/Documents/current/PKU/PKU_child_adult_meta_analysis"
   results_dir: "results/ES_analysis_results_tables"
   file_control_file: "src_table_extract/es_sum_file_control_file.csv"
   line_control_file: "src_table_extract/es_sum_line_control_file.csv"
   column_control_file: "src_table_extract/es_sum_column_control_file.csv"
-  output_file: "results/ES_analysis_results_tables/es_summary_table.csv"
-  file_list_output_file: "results/ES_analysis_results_tables/es_file_list.csv"
+  output_file: "results/ES_analysis_results_tables/within_age_es_summary_table.csv"
+  file_list_output_file: "results/ES_analysis_results_tables/within_age_es_file_list.csv"
+  
+adult_effect_size_summary: 
+  root_dir: "/Users/Olsonac-admin/Documents/current/PKU/PKU_child_adult_meta_analysis"
+  results_dir: "results/ES_analysis_results_tables"
+  file_control_file: "src_table_extract/es_adult_sum_file_control_file.csv"
+  line_control_file: "src_table_extract/es_adult_sum_line_control_file.csv"
+  column_control_file: "src_table_extract/es_adult_sum_column_control_file.csv"
+  output_file: "results/ES_analysis_results_tables/adult_es_summary_table.csv"
+  file_list_output_file: "results/ES_analysis_results_tables/adult_es_file_list.csv"
+  
+children_effect_size_summary: 
+  root_dir: "/Users/Olsonac-admin/Documents/current/PKU/PKU_child_adult_meta_analysis"
+  results_dir: "results/ES_analysis_results_tables"
+  file_control_file: "src_table_extract/es_children_sum_file_control_file.csv"
+  line_control_file: "src_table_extract/es_children_sum_line_control_file.csv"
+  column_control_file: "src_table_extract/es_children_sum_column_control_file.csv"
+  output_file: "results/ES_analysis_results_tables/children_es_summary_table.csv"
+  file_list_output_file: "results/ES_analysis_results_tables/children_es_file_list.csv"
+  
+children_effect_size_function_summary: 
+  root_dir: "/Users/Olsonac-admin/Documents/current/PKU/PKU_child_adult_meta_analysis"
+  results_dir: "results/function_results_tables"
+  file_control_file: "src_table_extract/es_children_file_control_file.csv"
+  line_control_file: "src_table_extract/es_children_line_control_file.csv"
+  column_control_file: "src_table_extract/es_children_column_control_file.csv"
+  output_file: "results/ES_analysis_results_tables/children_es_functions_summary_table.csv"
+  file_list_output_file: "results/ES_analysis_results_tables/children_es_functions_file_list.csv"

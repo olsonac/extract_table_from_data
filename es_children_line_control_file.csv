@@ -1,0 +1,57 @@
+﻿filetype_ID,select_column_name,search_string,line_name,line_order,column_ID
+visuo-spatial_skills,Label,^Adults null model$,Visuo-spatial skills,1,adults
+visuo-spatial_skills,Label,^Children null model$,Visuo-spatial skills,1,children
+visuo-spatial_skills,Label,^age_group model$,Visuo-spatial skills,1,age_model
+visuo-spatial_skills,Label,^CenteredPhe X age_group model$,Visuo-spatial skills,1,phe_by_age_model
+visual_learning_ltm,Label,^Adults null model$,Visual learning and LTM,2,adults
+visual_learning_ltm,Label,^Children null model$,Visual learning and LTM,2,children
+visual_learning_ltm,Label,^age_group model$,Visual learning and LTM,2,age_model
+visual_learning_ltm,Label,^CenteredPhe X age_group model$,Visual learning and LTM,2,phe_by_age_model
+language_speed,Label,^Adults null model$,Language speed,3,adults
+language_speed,Label,^Children null model$,Language speed,3,children
+language_speed,Label,^age_group model$,Language speed,3,age_model
+language_speed,Label,^CenteredPhe X age_group model$,Language speed,3,phe_by_age_model
+EF-reasoning_and_planning,Label,^Adults null model$,EF-Reasoning and planning,4,adults
+EF-reasoning_and_planning,Label,^Children null model$,EF-Reasoning and planning,4,children
+EF-reasoning_and_planning,Label,^age_group model$,EF-Reasoning and planning,4,age_model
+EF-reasoning_and_planning,Label,^CenteredPhe X age_group model$,EF-Reasoning and planning,4,phe_by_age_model
+EF-inhibitory_control,Label,^Adults null model$,EF-Inhibitory control,5,adults
+EF-inhibitory_control,Label,^Children null model$,EF-Inhibitory control,5,children
+EF-inhibitory_control,Label,^age_group model$,EF-Inhibitory control,5,age_model
+EF-inhibitory_control,Label,^CenteredPhe X age_group model$,EF-Inhibitory control,5,phe_by_age_model
+verbal_memory_and_learning,Label,^Adults null model$,Verbal learning and LTM,6,adults
+verbal_memory_and_learning,Label,^Children null model$,Verbal learning and LTM,6,children
+verbal_memory_and_learning,Label,^age_group model$,Verbal learning and LTM,6,age_model
+verbal_memory_and_learning,Label,^CenteredPhe X age_group model$,Verbal learning and LTM,6,phe_by_age_model
+EF-sustained_attention,Label,^Adults null model$,EF-Sustained attention,7,adults
+EF-sustained_attention,Label,^Children null model$,EF-Sustained attention,7,children
+EF-sustained_attention,Label,^age_group model$,EF-Sustained attention,7,age_model
+EF-sustained_attention,Label,^CenteredPhe X age_group model$,EF-Sustained attention,7,phe_by_age_model
+visuo_motor_control,Label,^Adults null model$,Visuo-motor control,8,adults
+visuo_motor_control,Label,^Children null model$,Visuo-motor control,8,children
+visuo_motor_control,Label,^age_group model$,Visuo-motor control,8,age_model
+visuo_motor_control,Label,^CenteredPhe X age_group model$,Visuo-motor control,8,phe_by_age_model
+visual_stm-wm,Label,^Adults null model$,Visual STM-WM,9,adults
+visual_stm-wm,Label,^Children null model$,Visual STM-WM,9,children
+visual_stm-wm,Label,^age_group model$,Visual STM-WM,9,age_model
+visual_stm-wm,Label,^CenteredPhe X age_group model$,Visual STM-WM,9,phe_by_age_model
+visuo-spatial_attention,Label,^Adults null model$,Visuo-spatial attention,10,adults
+visuo-spatial_attention,Label,^Children null model$,Visuo-spatial attention,10,children
+visuo-spatial_attention,Label,^age_group model$,Visuo-spatial attention,10,age_model
+visuo-spatial_attention,Label,^CenteredPhe X age_group model$,Visuo-spatial attention,10,phe_by_age_model
+EF-flexibility,Label,^Adults null model$,EF-Flexibility,11,adults
+EF-flexibility,Label,^Children null model$,EF-Flexibility,11,children
+EF-flexibility,Label,^age_group model$,EF-Flexibility,11,age_model
+EF-flexibility,Label,^CenteredPhe X age_group model$,EF-Flexibility,11,phe_by_age_model
+simple_rt,Label,^Adults null model$,Simple RT visuo-spatial,12,adults
+simple_rt,Label,^Children null model$,Simple RT visuo-spatial,12,children
+simple_rt,Label,^age_group model$,Simple RT visuo-spatial,12,age_model
+simple_rt,Label,^CenteredPhe X age_group model$,Simple RT visuo-spatial,12,phe_by_age_model
+verbal_stm-wm,Label,^Adults null model$,Verbal STM-WM,13,adults
+verbal_stm-wm,Label,^Children null model$,Verbal STM-WM,13,children
+verbal_stm-wm,Label,^age_group model$,Verbal STM-WM,13,age_model
+verbal_stm-wm,Label,^CenteredPhe X age_group model$,Verbal STM-WM,13,phe_by_age_model
+language_accuracy,Label,^Adults null model$,Language accuracy,14,adults
+language_accuracy,Label,^Children null model$,Language accuracy,14,children
+language_accuracy,Label,^age_group model$,Language accuracy,14,age_model
+language_accuracy,Label,^CenteredPhe X age_group model$,Language accuracy,14,phe_by_age_model
